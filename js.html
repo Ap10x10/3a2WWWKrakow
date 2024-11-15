@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <div id="div-id-1">Text strony</div>
+    
+    <p id="demo"></p>
+
+    <script>
+        // alert('Hell no world!');
+        // prompt('Jak masz na imie?')
+        // console.log('I am console your browser, hell no!')
+        //DOM
+        document.write('I am function write in DOM');
+        document.write("<h4>I am function write in DOM</h4>")
+        //my function
+        function myWrite(attribute)
+        {
+            document.write(attribute);
+        }
+        myWrite("<h1 class='element-h1'>Hello</h1>");
+        myWrite("<br>");
+        myWrite("<p>world!</p>");
+        myWrite("<br>");
+
+        let h1Element = document.getElementById("div-id-1");
+        h1Element.innerHTML += "<div style='color:blue;'>It is add innerHTML</div>"
+        h1Element.style.color = "red";
+        h1Element.style.fontSize = "30px";
+
+        //variable
+        let num = 1.45;
+        let str = 'string';
+        let bool = true;
+
+        const pi = 3.14;
+
+        console.log(num);
+        console.log(str);
+        console.log(bool);
+        console.log(pi);
+
+        let firstNum = 17;
+        let secondNum = 24;
+       
+        firstNum = 1000 + firstNum;
+        console.log(firstNum);
+        firstNum += 100
+        console.log(firstNum);
+        firstNum ++;
+        console.log(firstNum);
+        firstNum --;
+        console.log(firstNum);
+        
+        document.write('Wynik dodatek: ', firstNum + secondNum, '<br>');
+        document.write('Wynik reszta z dzielenia: ', firstNum % secondNum, '<br>');
+        document.write('Wynik dzielenia: ', firstNum / secondNum, '<br>');
+        document.write('Wynik mnażenia: ', firstNum * secondNum, '<br>');
+
+        //function
+        function suma(a,b)
+        {
+            return a+b;
+        }
+        document.write(suma(firstNum, secondNum));
+
+        //Listener and function
+
+        function myFunction()
+        {
+            document.getElementById('demo').innerHTML += 'We clicked!<br>';
+        }
+
+        document.addEventListener('click', myFunction);
+
+    </script>
+</body>
+</html>
